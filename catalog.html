@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
   <body>
@@ -19,21 +22,19 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current" href="index.html"
+              >Главная</a
+            >
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a
-              class="navigation-link navigation-link-current"
-              href="catalog.html"
-              >Гостиницы</a
-            >
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
-      <div class="navigation-user">
+      <div class="navigation-list navigation-user">
         <a class="navigation-link" href="#">
           <svg
             width="19"
@@ -60,7 +61,7 @@
             />
           </svg>
         </a>
-        <a class="navigation-link" href="#">Хочу сюда!</a>
+        <a class="button navigation-link" href="#">Хочу сюда!</a>
       </div>
     </header>
 
@@ -70,7 +71,10 @@
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html">
+              <a
+                class="breadcrumbs-link breadcrumbs-link-home"
+                href="index.html"
+              >
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -93,7 +97,7 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="control-input-checkbox"
                       type="checkbox"
                       name="infrastructure"
                       value="pool"
@@ -105,7 +109,7 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="control-input-checkbox"
                       type="checkbox"
                       name="infrastructure"
                       value="parking"
@@ -117,7 +121,7 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input
-                      class="control-input"
+                      class="control-input-checkbox"
                       type="checkbox"
                       name="infrastructure"
                       value="wifi"
@@ -208,17 +212,17 @@
         </select>
         <ul class="catalog-view-list">
           <li class="catalog-view-item">
-            <a href="#" class="button button-active">
+            <a href="#" class="button-view button-view-active view-card">
               <span class="visually-hidden">Показать карточки</span>
             </a>
           </li>
           <li class="catalog-view-item">
-            <a href="#" class="button">
+            <a href="#" class="button-view view-one">
               <span class="visually-hidden">Показать по одному</span>
             </a>
           </li>
           <li class="catalog-view-item">
-            <a href="#" class="button">
+            <a href="#" class="button-view view-list">
               <span class="visually-hidden">Отобразить списком</span>
             </a>
           </li>
@@ -358,18 +362,24 @@
     <footer class="page-footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="social-button" href="https://vk.com/htmlacademy">
+          <a
+            class="social-button social-button-vk"
+            href="https://vk.com/htmlacademy"
+          >
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="social-button" href="https://t.me/htmlacademy">
+          <a
+            class="social-button social-button-tg"
+            href="https://t.me/htmlacademy"
+          >
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="footer-social-item">
           <a
-            class="social-button"
+            class="social-button social-button-yt"
             href="https://www.youtube.com/user/htmlacademyru"
           >
             <span class="visually-hidden">YouTube</span>
