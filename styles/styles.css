@@ -353,9 +353,11 @@ body {
 
 .newsletter-form {
   display: flex;
+  justify-content: center;
 }
 
 .newsletter-form .field {
+  font-family: inherit;
   background: #f2f2f2;
   font-size: 18px;
   line-height: 21px;
@@ -587,7 +589,6 @@ body {
 .catalog-product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0 0 66px 0;
   padding: 0;
 }
@@ -597,6 +598,11 @@ body {
   padding: 20px;
 }
 
+.catalog-product-item:not(:nth-child(3n)) {
+  margin: 0 18px 0 0;
+}
+
+/*доделать внутрянку карточек*/
 .catalog-product-link {
   text-decoration: none;
 }
@@ -614,9 +620,16 @@ body {
   margin: 0 auto 16px 0;
 }
 
-.catalog-product-type,
+.catalog-product-type {
+  margin: 0 0 16px 0;
+}
+
 .catalog-product-price {
   margin: 0 0 16px 0;
+}
+
+.catalog-product-item .button {
+  display: inline-block;
 }
 
 .catalog-product-button {
