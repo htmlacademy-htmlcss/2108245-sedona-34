@@ -67,6 +67,7 @@ body {
 }
 
 .button {
+  display: inline-block;
   font-family: inherit;
   color: #ffffff;
   padding: 14px 15px;
@@ -76,6 +77,54 @@ body {
   line-height: 20px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-link {
+  background-color: #756157;
+}
+
+.button-submit {
+  background-color: #82b3d3;
+}
+
+.button-visited {
+  background-color: #7db54f;
+}
+
+/*изменение состояний кнопок*/
+.button-link:hover {
+  background-color: #615048;
+}
+
+.button-link:focus {
+  background-color: #615048;
+}
+
+.button-submit:hover {
+  background-color: #68a2ca;
+}
+
+.button-submit:focus {
+  background-color: #68a2ca;
+}
+
+.button-visited:hover {
+  background-color: #6c9e42;
+}
+
+.button-visited:focus {
+  background-color: #6c9e42;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 30%);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
 }
 
 /*page-header*/
@@ -165,13 +214,7 @@ body {
 }
 
 .user-bar-button {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #756157;
   padding: 9px 15px 8px 15px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
   text-align: center;
   width: 160px;
   margin-left: 20px;
@@ -354,9 +397,6 @@ body {
   display: block;
   font-size: 20px;
   line-height: 36px;
-  margin: 0 auto;
-  text-decoration: none;
-  background-color: #756157;
   padding: 12px 15px;
 }
 
@@ -402,15 +442,10 @@ body {
 }
 
 .newsletter-button {
-  margin-left: 0;
   width: 200px;
   font-size: 20px;
   line-height: 36px;
-  text-decoration: none;
-  background-color: #82b3d3;
   padding: 12px 15px;
-  text-transform: uppercase;
-  border: none;
   border-radius: 0 4px 4px 0;
 }
 
@@ -451,6 +486,27 @@ body {
   justify-content: center;
 }
 
+/*изменение состояний иконок соцсетей*/
+
+.social-icon {
+  fill: #82b3d3;
+}
+
+.social-button:hover .social-icon {
+  fill: #68a2ca;
+}
+
+.social-button:focus .social-icon {
+  fill: #68a2ca;
+}
+
+.social-button:active .social-icon {
+  fill: #68a2ca;
+  opacity: 30%;
+}
+
+/*телефон*/
+
 .page-footer-phone {
   width: 360px;
   font-size: 40px;
@@ -462,10 +518,45 @@ body {
   margin: 0 auto;
 }
 
+/*изменение состояния телефона*/
+
+.page-footer-phone:hover {
+  color: #756157;
+}
+
+.page-footer-phone:focus {
+  color: #756157;
+}
+
+.page-footer-phone:active {
+  color: #756157;
+  opacity: 30%;
+}
+
+/*Логотип академии*/
 .page-footer-logo {
   display: flex;
   width: 115px;
   margin-left: auto;
+}
+
+/*Изменение состояний логотипа академии*/
+
+.footer-logo-icon {
+  fill: #000000;
+}
+
+.page-footer-logo:hover .footer-logo-icon {
+  fill: #756157;
+}
+
+.page-footer-logo:focus .footer-logo-icon {
+  fill: #756157;
+}
+
+.page-footer-logo:active .footer-logo-icon {
+  fill: #756157;
+  opacity: 30%;
 }
 
 /***catalog***/
@@ -500,9 +591,51 @@ body {
 }
 
 .breadcrumbs-link {
+  display: inline-block;
   text-align: left;
   margin: auto 0;
 }
+
+.breadcrumbs-link-home {
+  background-image: url(/images/svg/breadcrumbs-home.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 25px;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  position: absolute;
+  background-image: url(/images/svg/breadcrumbs-arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 8px;
+  width: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -15px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+/*изменение состояния хлебных крошек*/
+.breadcrumbs-link:hover {
+  opacity: 60%;
+}
+
+.breadcrumbs-link:active {
+  opacity: 30%;
+}
+
+/*фильтры*/
 
 .catalog-filter-title {
   font-weight: 700;
@@ -595,19 +728,12 @@ body {
 
 .button-apply {
   width: 160px;
-  text-decoration: none;
-  background-color: #82b3d3;
-  padding: 14px 15px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 4px;
   margin: 0 0 10px;
 }
 
 .button-reset {
   display: block;
   width: 100%;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0);
   text-transform: none;
   padding: 10px 15px 0 15px;
@@ -669,13 +795,26 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-
 }
-
 
 .button-view-active {
   border: 2px solid #000000;
 }
+
+/*изменение состояния кнопок вида*/
+.button-view:not(.button-view-active):hover {
+  border-color: #000000;
+}
+
+.button-view:focus {
+  border-color: #68a2ca;
+}
+
+.button-view:active {
+  border-color: #000000;
+}
+
+/*изображение кнопок вида*/
 
 .view-card {
   background-image: url("/images/svg/view-table.svg");
@@ -737,21 +876,11 @@ body {
 }
 
 .catalog-product-button {
-  text-decoration: none;
-  background-color: #756157;
   padding: 9px 15px 8px 15px;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
 }
 
 .catalog-product-like {
-  text-decoration: none;
-  background-color: #82b3d3;
   padding: 9px 15px 8px 15px;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
 }
 
 .catalog-product-visited {
@@ -760,7 +889,21 @@ body {
   padding: 9px 15px 8px 15px;
   border: none;
   border-radius: 4px;
-  text-align: center;
+}
+
+/*stars*/
+.catalog-product-star {
+  background-image: url(/images/svg/stars.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.three-star {
+  background-position: -24px;
+}
+
+.two-star {
+  background-position: -48px;
 }
 
 .catalog-product-rating {
@@ -799,7 +942,7 @@ body {
   text-align: center;
   width: 60px;
   padding: 12px 0;
-  min-height: 60px;
+  height: 60px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -813,6 +956,23 @@ body {
   color: #000000;
   background-color: #f2f2f2;
 }
+
+/*изменение состояния пагинации*/
+.pagination-link:not(.pagination-current):hover {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-current):focus {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-current):active {
+  color: rgba(255, 255, 255, 30%);
+}
+
+/*количество на странице элементов*/
 
 .select-number-wrapper {
   display: flex;
