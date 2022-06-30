@@ -296,6 +296,112 @@
           </svg>
         </a>
       </footer>
+
+      <div class="modal-container">
+        <div class="modal modal-auth">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+            <form
+              class="search-form"
+              action="https://echo.htmlacademy.ru/"
+              method="post"
+            >
+              <div class="filed-container">
+                <label class="field-label" for="date-from"
+                  ><span class="name-field">Дата Заезда:</span></label
+                >
+
+                <input
+                  class="modal-input date-input"
+                  type="text"
+                  name="date-from"
+                  value="27 апреля 2020"
+                  required
+                />
+
+                <span class="date-error date-text">
+                  Мы не можем отправить вас в прошлое
+                </span>
+              </div>
+
+              <div class="filed-container">
+                <label class="field-label"
+                  ><span class="name-field" for="date-to"
+                    >Дата Выезда:</span
+                  ></label
+                >
+                <input
+                  class="modal-input date-input"
+                  type="text"
+                  name="date-to"
+                  value="1 сентября 2021"
+                  required
+                />
+                <span class="date-hint date-text">
+                  На эти даты есть свободные номера. Пока есть.
+                </span>
+              </div>
+              <div class="filed-container">
+                <div class="people-field adult-field">
+                  <label class="field-label" for="adult-number"
+                    ><span class="name-field">Взрослые:</span></label
+                  >
+                  <div class="number-field">
+                    <button class="button-number button-minus" type="button">
+                      <span class="visually-hidden">Убавить</span>
+                    </button>
+                    <input
+                      class="modal-input number-input"
+                      type="number"
+                      name="adult-number"
+                      id="adult-number"
+                      value="2"
+                    /><button class="button-number button-plus" type="button">
+                      <span class="visually-hidden">Добавить</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="people-field child-field">
+                  <label class="field-label" for="child-number"
+                    ><span class="name-field">Дети:</span></label
+                  >
+                  <div class="child-info">
+                    <span class="visually-hidden">Подсказка</span>
+                  </div>
+                  <div class="popover">
+                    <p class="popover-content">
+                      Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.
+                    </p>
+                  </div>
+                  <div class="number-field">
+                    <button class="button-number button-minus" type="button">
+                      <span class="visually-hidden">Убавить</span>
+                    </button>
+                    <input
+                      class="modal-input number-input"
+                      type="number"
+                      name="child-number"
+                      id="child-number"
+                      value="1"
+                    /><button class="button-number button-plus" type="button">
+                      <span class="visually-hidden">Добавить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="button button-submit modal-submit" type="submit">
+                Найти
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
