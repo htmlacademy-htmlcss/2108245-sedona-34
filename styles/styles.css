@@ -1133,7 +1133,6 @@ body {
 }
 
 .modal-input {
-  box-sizing: border-box;
   background-color: #f2f2f2;
   border: none;
   font: inherit;
@@ -1141,13 +1140,16 @@ body {
   height: 50px;
 }
 
-.modal-input:hover {
-  background-color: #e6e6e6;
-}
+
 
 .modal-input:focus {
   background-color: #e6e6e6;
   border: 3px solid #83b3d3;
+  background-position: right 32px center;
+}
+
+.modal-input:not(:placeholder-shown) {
+  background-color: #F2F2F2;
 }
 
 .modal-input:active {
@@ -1160,9 +1162,22 @@ body {
   opacity: 0.3;
 }
 
+.modal-input:focus:not(:placeholder-shown) {
+  background-color: #ffffff;
+  outline: none;
+}
+
+.modal-input:hover {
+  background-color: #e6e6e6;
+}
+
 .date-input {
   width: 420px;
   padding: 15px 50px 14px 19px;
+  position: relative;
+  background-image: url("/images/svg/modal-date.svg");
+  background-repeat: no-repeat;
+  background-position: right 34px center;
 }
 
 .field-label {
@@ -1321,7 +1336,7 @@ body {
   color: #ffffff;
   min-height: 70px;
   display: none;
-}
+  }
 
 .popover::before {
   content: "";
