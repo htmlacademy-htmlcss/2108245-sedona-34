@@ -161,17 +161,24 @@ body {
 
 .navigation-link {
   display: block;
-  padding: 19px 0;
+  padding: 20px 0 19px 0;
   margin: 0 17px;
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
   font-weight: 700;
   color: #000000;
+  position: relative;
 }
 
-.navigation-link-current {
-  border-bottom: 2px solid #756257;
+.navigation-link-current::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #756257;
+  position: absolute;
 }
 
 .user-bar {
@@ -593,6 +600,7 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0 0 10px 0;
+  padding: 0;
 }
 
 /*breadcrumbs*/
@@ -601,7 +609,7 @@ body {
   list-style-type: none;
   font-size: 16px;
   line-height: 21px;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px 2px;
   display: flex;
   padding: 0;
 }
@@ -658,11 +666,12 @@ body {
   font-size: 20px;
   line-height: 26px;
   margin: 0 0 30px 0;
+  padding: 0;
 }
 
 .catalog-filter-form {
   display: grid;
-  grid-template-columns: 150px 150px 1fr auto 160px;
+  grid-template-columns: 150px 150px 1fr 288px 160px;
   gap: 70px;
 }
 
@@ -677,7 +686,7 @@ body {
 .catalog-filter-list {
   margin: 0;
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 1px;
 }
 
 .catalog-filter-item {
@@ -771,20 +780,22 @@ body {
   box-sizing: border-box;
   height: 48px;
   display: flex;
-  width: 144px;
+  width: 145px;
   background-color: rgba(0, 0, 0, 0);
   border: #ffffff 2px solid;
-  padding: 14px 45px 13px 18px;
+  padding: 14px 45px 13px 16px;
   color: #ffffff;
   font: inherit;
 }
 
 .input-price-from {
+  margin-right: -1px;
   border-radius: 4px 0 0 4px;
 }
 
 .input-price-to {
   border-radius: 0 4px 4px 0;
+  margin-left: -1px;
 }
 
 .price-wrapper {
@@ -798,8 +809,8 @@ body {
 
 .text-price {
   position: absolute;
-  right: 14px;
-  top: 20px;
+  right: 16px;
+  top: 22px;
   transform: translateY(-50%);
   opacity: 0.3;
 }
@@ -817,11 +828,16 @@ body {
 }
 
 .control-input:focus {
-  box-shadow: inset 0px 0px 0px 3px #81b3d2, 0 0 0 3px #81b3d2;
+  box-shadow: inset 0 0 0 3px #81b3d2, 0 0 0 3px #81b3d2;
+  border-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
-.control-input:disabled {
+.control-input:active {
   background: #756257;
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: none;
+  outline: none;
 }
 
 /*полоса стоимости*/
@@ -888,7 +904,7 @@ body {
   display: block;
   position: absolute;
   left: 50%;
-  bottom: -5px;
+  bottom: -4px;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0);
   text-transform: none;
@@ -904,6 +920,7 @@ body {
 
 .button-reset:focus {
   border: 3px solid #83b3d3;
+  bottom: -8px;
   border-radius: 4px;
 }
 
@@ -932,6 +949,7 @@ body {
   text-transform: uppercase;
   width: 350px;
   text-align: left;
+  padding: 7px 0 5px 0;
   margin: auto 0;
 }
 
@@ -941,6 +959,7 @@ body {
   line-height: 21px;
   border-color: #e5e5e5;
   border: 2px solid #e5e5e5;
+  border-radius: 4px;
   appearance: none;
   background-image: url("/images/svg/select-arrow.svg");
   background-repeat: no-repeat;
@@ -949,7 +968,7 @@ body {
 
 .select-filter {
   width: 290px;
-  padding: 12px 32px 12px 20px;
+  padding: 12px 32px 12px 18px;
 }
 
 .select-control:hover {
@@ -977,7 +996,7 @@ body {
   grid-template-columns: repeat(3, 48px);
   gap: 8px;
   margin: 0;
-  align-items: center;
+  margin-bottom: auto;
 }
 
 .button-view {
@@ -1027,31 +1046,29 @@ body {
 }
 
 /*модальное окно*/
-.modal-container-close {
-  display: none;
-}
 
 .modal-container {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  display: none;
+}
+
+.modal-container.is-open {
+  display: flex;
 }
 
 .modal {
   position: relative;
-  margin: auto;
-  margin-top: 396px;
   padding: 62px 70px 70px 70px;
   background-color: #ffffff;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-}
-
-.modal-auth {
   width: 715px;
 }
 
@@ -1099,12 +1116,20 @@ body {
   flex-wrap: wrap;
 }
 
-.filed-container {
+.field-container {
   display: flex;
   margin-bottom: 40px;
   justify-content: space-between;
   position: relative;
   width: 100%;
+}
+
+.field-container.is-valid .date-hint {
+  display: block;
+}
+
+.field-container.is-invalid .date-error {
+  display: block;
 }
 
 .modal-input {
@@ -1153,7 +1178,7 @@ body {
 }
 
 .date-text {
-  display: block;
+  display: none;
   position: absolute;
   width: 420px;
   font: inherit;
@@ -1190,7 +1215,6 @@ body {
 }
 
 .button-number {
-  box-sizing: border-box;
   position: absolute;
   width: 25px;
   height: 25px;
@@ -1208,6 +1232,10 @@ body {
 
 .button-number:hover {
   opacity: 1;
+}
+
+.button-number:hover ~ .modal-input {
+  background-color: #e6e6e6;
 }
 
 .button-number:focus {
@@ -1256,6 +1284,7 @@ body {
 }
 
 .child-info {
+  display: block;
   width: 25px;
   height: 25px;
   background-color: #83b3d3;
@@ -1273,25 +1302,24 @@ body {
   background-color: #68a2ca;
 }
 
+.child-info:hover .popover {
+  display: block;
+}
+
 .popover {
   width: 256px;
-  padding: 15px 18px 20px 22px;
+  padding: 15px 18px 23px 22px;
   background-color: #333333;
   border-radius: 10px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 54px;
-  left: 66px;
+  top: 40px;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
   min-height: 70px;
-  display: none;
-}
-
-.popover-open {
-  display: block;
 }
 
 .popover::before {
@@ -1316,6 +1344,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 0 18px;
   padding: 0;
+  padding-left: 1px;
   margin: 0 0 66px 0;
   list-style-type: none;
 }
@@ -1329,11 +1358,11 @@ body {
 .catalog-product-link {
   flex-grow: 1;
   text-decoration: none;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .catalog-product-image {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   object-fit: contain;
 }
 
@@ -1405,7 +1434,7 @@ body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   border-top: 1px solid #e6e6e6;
-  padding: 30px 0 0 0;
+  padding: 29px 0 0 1px;
 }
 
 .pagination {
