@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
-
   <body>
     <div class="page-wrapper">
       <header class="page-header">
@@ -26,7 +26,6 @@
             <li class="navigation-item">
               <a
                 class="navigation-link navigation-link-current"
-                href="index.html"
                 >Главная</a
               >
             </li>
@@ -70,7 +69,6 @@
           <a class="button button-link user-bar-button" href="#">Хочу сюда!</a>
         </div>
       </header>
-
       <main class="main-container main-index">
         <section class="welcome">
           <h1 class="visually-hidden">Сайт городка Седона</h1>
@@ -89,7 +87,6 @@
           <p class="slogan-text">
             Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
           </p>
-
           <div class="advantages-card">
             <div class="advantages-card-dark">
               <h3 class="advantages-title">Настоящий городок</h3>
@@ -129,7 +126,6 @@
               </p>
             </li>
           </ul>
-
           <div class="advantages-card">
             <img
               class="advantages-img"
@@ -146,7 +142,6 @@
               </p>
             </div>
           </div>
-
           <ul class="advantages-list advantages-list-bottom">
             <li class="advantages-item">
               <h3 class="advantages-title">Небольшая<br />площадь</h3>
@@ -171,7 +166,6 @@
             </li>
           </ul>
         </section>
-
         <section class="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-text">
@@ -182,7 +176,6 @@
             >Поиск гостиницы в Седоне</a
           >
         </section>
-
         <section class="newsletter newsletter-background">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-text">
@@ -210,7 +203,6 @@
           </form>
         </section>
       </main>
-
       <footer class="page-footer">
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -304,19 +296,18 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-
           <form
             class="search-form"
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <!-- Чтобы появился текст корректного заполнения формы к классу .field-container добавить класс .is-valid, -->
-            <!-- Чтобы появился текст ошибки к классу .field-container добавить класс .is-invalid, -->
+            <!-- Чтобы появился текст корректного заполнения формы к классу .field-container добавить класс .is-valid -->
+            <!-- Чтобы появился текст ошибки к классу .field-container добавить класс .is-invalid -->
+
             <div class="field-container">
               <label class="field-label" for="date-from"
                 ><span class="name-field">Дата Заезда:</span></label
               >
-
               <input
                 class="modal-input date-input"
                 type="text"
@@ -325,7 +316,6 @@
                 placeholder="27 апреля 2020"
                 required
               />
-
               <span class="date-error date-text">
                 Мы не можем отправить вас в прошлое
               </span>
@@ -334,8 +324,9 @@
               </span>
             </div>
 
-            <!-- Чтобы появился текст корректного заполнения формы к классу .field-container добавить класс .is-valid, -->
-            <!-- Чтобы появился текст ошибки к классу .field-container добавить класс .is-invalid, -->
+            <!-- Чтобы появился текст корректного заполнения формы к классу .field-container добавить класс .is-valid -->
+            <!-- Чтобы появился текст ошибки к классу .field-container добавить класс .is-invalid -->
+
             <div class="field-container">
               <label class="field-label" for="date-to"
                 ><span class="name-field">Дата Выезда:</span></label
@@ -394,7 +385,6 @@
                     </p>
                   </div>
                 </div>
-
                 <div class="number-field">
                   <button class="button-number button-minus" type="button">
                     <span class="visually-hidden"
