@@ -4,7 +4,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,7 +12,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -131,6 +131,7 @@ img {
 
 .button:disabled {
   background-color: #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 
 /* Page-header */
@@ -255,7 +256,7 @@ img {
   position: relative;
   width: 100%;
   background-color: #aabfd2;
-  background-image: url("/images/welcome-background.jpg");
+  background-image: url("../images/welcome-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -268,7 +269,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url("/images/svg/welcome-background-mask.svg");
+  background-image: url("../images/svg/welcome-background-mask.svg");
   background-size: cover;
   width: 100%;
   height: 57px;
@@ -350,6 +351,10 @@ img {
   padding: 92px 85px;
 }
 
+.advantages-item .advantages-subject {
+  color: #333333;
+}
+
 .advantages-item:nth-child(odd) {
   background-color: #f0f5f9;
 }
@@ -377,19 +382,19 @@ img {
 .advantages-item-hotel::before {
   width: 76px;
   height: 73px;
-  background-image: url("/images/svg/advantage-icon-house.svg");
+  background-image: url("../images/svg/advantage-icon-house.svg");
 }
 
 .advantages-item-food::before {
   width: 76px;
   height: 73px;
-  background-image: url("/images/svg/advantage-icon-hamburger.svg");
+  background-image: url("../images/svg/advantage-icon-hamburger.svg");
 }
 
 .advantages-item-souvenir::before {
   width: 65px;
   height: 77px;
-  background-image: url("/images/svg/advantage-icon-present.svg");
+  background-image: url("../images/svg/advantage-icon-present.svg");
   top: 79px;
 }
 
@@ -449,6 +454,7 @@ img {
   line-height: 26px;
   margin: 0 auto 46px auto;
   width: 475px;
+  color: #333333;
 }
 
 .newsletter-form {
@@ -465,7 +471,7 @@ img {
   width: 600px;
   min-height: 60px;
   border: 2px solid #f2f2f2;
-  padding: 20px 0 19px 22px;
+  padding: 18px 0 17px 20px;
   margin-right: 0;
 }
 
@@ -514,9 +520,13 @@ img {
 .newsletter-background {
   background-color: #aabfd2;
   color: #ffffff;
-  background-image: url("/images/background-email.jpg");
+  background-image: url("../images/background-email.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.newsletter-background .newsletter-text {
+  color: #ffffff;
 }
 
 /* Footer */
@@ -629,7 +639,7 @@ img {
   width: 100%;
   background-color: #aabfd2;
   color: #ffffff;
-  background-image: url("/images/filter-background.jpg");
+  background-image: url("../images/filter-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 35px 70px 70px 70px;
@@ -663,7 +673,7 @@ img {
 }
 
 .breadcrumbs-link-home {
-  background-image: url("/images/svg/breadcrumbs-home.svg");
+  background-image: url("../images/svg/breadcrumbs-home.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 12px;
@@ -678,7 +688,7 @@ img {
 .breadcrumbs-item::after {
   content: "";
   position: absolute;
-  background-image: url("/images/svg/breadcrumbs-arrow-right.svg");
+  background-image: url("../images/svg/breadcrumbs-arrow-right.svg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 8px;
@@ -761,7 +771,7 @@ img {
 }
 
 .control-input-checkbox[type="checkbox"]:checked + .control-mark {
-  background-image: url("/images/svg/tick.svg");
+  background-image: url("../images/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 10px;
@@ -1024,10 +1034,11 @@ img {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   appearance: none;
-  background-image: url("/images/svg/select-arrow.svg");
+  background-image: url("../images/svg/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-color: #ffffff;
+  color: #333333;
 }
 
 .select-filter {
@@ -1099,15 +1110,15 @@ img {
 /* Изображение кнопок вида */
 
 .view-card {
-  background-image: url("/images/svg/view-table.svg");
+  background-image: url("../images/svg/view-table.svg");
 }
 
 .view-one {
-  background-image: url("/images/svg/view-only-one.svg");
+  background-image: url("../images/svg/view-only-one.svg");
 }
 
 .view-list {
-  background-image: url("/images/svg/view-list.svg");
+  background-image: url("../images/svg/view-list.svg");
 }
 
 .button-view-active::before {
@@ -1152,7 +1163,7 @@ img {
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("/images/svg/modal-close.svg");
+  background-image: url("../images/svg/modal-close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -1209,7 +1220,6 @@ img {
   height: 50px;
   margin: auto 0;
   font-weight: 700;
-  line-height: 40px;
   border: 2px solid #f2f2f2;
 }
 
@@ -1247,7 +1257,7 @@ img {
   width: 420px;
   padding: 15px 50px 14px 19px;
   position: relative;
-  background-image: url("/images/svg/modal-date.svg");
+  background-image: url("../images/svg/modal-date.svg");
   background-repeat: no-repeat;
   background-position: right 19px center;
 }
@@ -1340,12 +1350,12 @@ img {
 }
 
 .button-minus {
-  background-image: url("/images/svg/modal-minus.svg");
+  background-image: url("../images/svg/modal-minus.svg");
   left: 14px;
 }
 
 .button-plus {
-  background-image: url("/images/svg/modal-plus.svg");
+  background-image: url("../images/svg/modal-plus.svg");
   right: 14px;
 }
 
@@ -1387,18 +1397,26 @@ img {
   position: relative;
 }
 
+.name-child-field {
+  margin-right: 0;
+  position: relative;
+}
+
 .child-info {
   display: block;
   min-width: 25px;
   height: 25px;
   background-color: #83b3d3;
   border-radius: 50%;
-  background-image: url("/images/svg/modal-info.svg");
+  background-image: url("../images/svg/modal-info.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   margin: auto 5px auto 0;
-  position: relative;
+  position: absolute;
+  top: 51%;
+  transform: translateY(-50%);
+  right: 146px;
 }
 
 .child-info:hover {
@@ -1485,6 +1503,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 20px;
+  color: #333333;
 }
 
 .catalog-product-button {
@@ -1509,7 +1528,7 @@ img {
 /* Stars */
 
 .catalog-product-star {
-  background-image: url("/images/svg/stars.svg");
+  background-image: url("../images/svg/stars.svg");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -1616,4 +1635,5 @@ img {
 
 .select-text {
   margin: auto 51px auto 0;
+  color: #333333;
 }
